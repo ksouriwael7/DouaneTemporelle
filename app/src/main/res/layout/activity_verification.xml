@@ -41,10 +41,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_titre_wk"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="17dp"
             android:text="Nom du voyageur :"
-            android:textStyle="bold"
-            android:textColor="#222222" />
+            android:textColor="#222222"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tv_nom_wk"
@@ -54,12 +54,23 @@
             android:text="Nom"
             android:textSize="18sp"
             android:textColor="#17365D" />
+        <TextView
+            android:id="@+id/tv_passport_wk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_nom_wk"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Passeport : "
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#17365D" />
 
         <TextView
             android:id="@+id/tv_age_label_wk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tv_nom_wk"
+            android:layout_below="@id/tv_passport_wk"
             android:layout_marginTop="20dp"
             android:text="Age temporel :"
             android:textStyle="bold"
@@ -69,29 +80,31 @@
             android:id="@+id/tv_age_wk"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tv_age_label_wk"
+            android:layout_below="@+id/tv_age_label_wk"
+            android:layout_marginTop="16dp"
             android:text="Age"
-            android:textSize="18sp"
-            android:textColor="#17365D" />
+            android:textColor="#17365D"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/tv_motif_label_wk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_age_wk"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="50dp"
             android:text="Motif du voyage :"
-            android:textStyle="bold"
-            android:textColor="#222222" />
+            android:textColor="#222222"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tv_motif_wk"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_motif_label_wk"
+            android:layout_marginTop="42dp"
             android:text="Motif"
-            android:textSize="18sp"
-            android:textColor="#17365D" />
+            android:textColor="#17365D"
+            android:textSize="18sp" />
 
         <LinearLayout
             android:id="@+id/choix_wk"
