@@ -24,15 +24,15 @@ public class ResultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_result);
 
         boolean decision = getIntent().getBooleanExtra(
-                genererCle("9007", "decision"), false);
+                genererCle("1903", "decision"), false);
 
         String nom = getIntent().getStringExtra(
-                genererCle("9007", "nom"));
+                genererCle("1903", "nom"));
 
         String raison = getIntent().getStringExtra(
-                genererCle("9007", "raison"));
+                genererCle("1903", "raison"));
         String passport = getIntent().getStringExtra(
-                genererCle("9007", "passport"));
+                genererCle("1903", "passport"));
         if (nom == null || nom.trim().isEmpty()) {
             Toast.makeText(this,
                     "Informations du voyageur introuvables !",

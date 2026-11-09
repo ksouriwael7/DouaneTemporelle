@@ -79,12 +79,6 @@ public class MainActivity extends AppCompatActivity {
                 return;
             }
 
-            if (anneeDest < anneeNaiss) {
-                anneeDestination.setError("Destination temporelle impossible !");
-                anneeDestination.requestFocus();
-                return;
-            }
-
             int choix = groupeMotif.getCheckedRadioButtonId();
 
             if (choix == -1) {
@@ -102,11 +96,11 @@ public class MainActivity extends AppCompatActivity {
 
             Intent intent = new Intent(MainActivity.this, verificationActivity.class);
 
-            intent.putExtra(genererCle("9007", "nom"), nomVoyageur);
-            intent.putExtra(genererCle("9007", "naissance"), anneeNaiss);
-            intent.putExtra(genererCle("9007", "destination"), anneeDest);
-            intent.putExtra(genererCle("9007", "motif"), motif);
-            intent.putExtra(genererCle("9007", "passport"), passport);
+            intent.putExtra(genererCle("1903", "nom"), nomVoyageur);
+            intent.putExtra(genererCle("1903", "naissance"), anneeNaiss);
+            intent.putExtra(genererCle("1903", "destination"), anneeDest);
+            intent.putExtra(genererCle("1903", "motif"), motif);
+            intent.putExtra(genererCle("1903", "passport"), passport);
             startActivity(intent);
         });
     }

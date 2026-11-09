@@ -36,23 +36,22 @@ public class verificationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_verification);
 
         String nom = getIntent().getStringExtra(
-                genererCle("9007", "nom"));
+                genererCle("1903", "nom"));
 
         int naissance = getIntent().getIntExtra(
-                genererCle("9007", "naissance"), -1);
+                genererCle("1903", "naissance"), -1);
 
         int destination = getIntent().getIntExtra(
-                genererCle("9007", "destination"), -1);
+                genererCle("1903", "destination"), -1);
 
         String motif = getIntent().getStringExtra(
-                genererCle("9007", "motif"));
+                genererCle("1903", "motif"));
 
         String passport = getIntent().getStringExtra(
-                genererCle("9007", "passport"));
+                genererCle("1903", "passport"));
 
         if (nom == null || motif == null || passport == null ||
-                naissance < 1 || destination < 1 ||
-                destination < naissance) {
+                naissance < 1 || destination < 1) {
 
             Toast.makeText(this,
                     "Informations invalides !",
@@ -90,7 +89,7 @@ public class verificationActivity extends AppCompatActivity {
                 estModificationPasse && estPremier(ageTemporel);
 
         // Affichage du résultat de vérification
-        
+
 
         final String raisonRefus = modificationInterdite
                 ? "Risque de paradoxe temporel : la modification du passé est interdite."
@@ -127,10 +126,10 @@ public class verificationActivity extends AppCompatActivity {
         Intent intent = new Intent(
                 verificationActivity.this, ResultActivity.class);
 
-        intent.putExtra(genererCle("9007", "decision"), decision);
-        intent.putExtra(genererCle("9007", "nom"), nom);
-        intent.putExtra(genererCle("9007", "raison"), raison);
-        intent.putExtra(genererCle("9007", "passport"), passport);
+        intent.putExtra(genererCle("1903", "decision"), decision);
+        intent.putExtra(genererCle("1903", "nom"), nom);
+        intent.putExtra(genererCle("1903", "raison"), raison);
+        intent.putExtra(genererCle("1903", "passport"), passport);
 
         startActivity(intent);
     }
