@@ -1,6 +1,5 @@
 
 package com.example.douanetemporelle;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -62,7 +61,7 @@ public class verificationActivity extends AppCompatActivity {
             return;
         }
 
-        int ageTemporel = destination - naissance;
+        int ageTemporel = Math.abs(destination - naissance); ;
 
         TextView tvNom = findViewById(R.id.tv_nom_wk);
         TextView tvAge = findViewById(R.id.tv_age_wk);
