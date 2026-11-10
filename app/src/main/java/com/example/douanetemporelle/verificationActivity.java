@@ -8,14 +8,14 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+// bech nekhdhou les donnes li jewna mel main w bch nehsbou behom el amor w ken oomrou premier wala le
 public class verificationActivity extends AppCompatActivity {
 
     public static String genererCle(String matricule, String nom) {
         String prefixe = matricule.substring(matricule.length() - 4);
         return prefixe + "_" + nom;
     }
-
+    // nchoufou ken num premier wale le
     public boolean estPremier(int nombre) {
         if (nombre <= 1) {
             return false;
@@ -33,8 +33,9 @@ public class verificationActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //narbtou el java bel XML verificationActivity.xml
         setContentView(R.layout.activity_verification);
-
+        // haka nekhdhou les donnes li jewna mel main
         String nom = getIntent().getStringExtra(
                 genererCle("1903", "nom"));
 
@@ -49,7 +50,7 @@ public class verificationActivity extends AppCompatActivity {
 
         String passport = getIntent().getStringExtra(
                 genererCle("1903", "passport"));
-
+        //ken fama haja gahltaa wala neksa yjik message
         if (nom == null || motif == null || passport == null ||
                 naissance < 1 || destination < 1) {
 
@@ -79,7 +80,7 @@ public class verificationActivity extends AppCompatActivity {
         Button btnRefuser =
                 findViewById(R.id.btn_refuser_wk);
 
-        // Vérification du motif et du nombre premier
+        // naamlou vérification lel motif et w ken nombre premier
         String motifNettoye = motif.trim();
 
         boolean estModificationPasse =
@@ -88,14 +89,14 @@ public class verificationActivity extends AppCompatActivity {
         boolean modificationInterdite =
                 estModificationPasse && estPremier(ageTemporel);
 
-        // Affichage du résultat de vérification
+        // affichage le resultat taa el verification
 
 
         final String raisonRefus = modificationInterdite
                 ? "Risque de paradoxe temporel : la modification du passé est interdite."
                 : "";
 
-        // Désactivation du bouton si le voyage est interdit
+        // nsakrou el bouton ken el nul premier
         if (modificationInterdite) {
             btnApprouver.setEnabled(false);
             btnApprouver.setClickable(false);
@@ -119,7 +120,7 @@ public class verificationActivity extends AppCompatActivity {
             ouvrirResultat(false, nom, raison,passport);
         });
     }
-
+    // fonction taawena bech naabaathou les données el ResultatActivity
     private void ouvrirResultat(boolean decision, String nom,
                                 String raison, String passport) {
 
